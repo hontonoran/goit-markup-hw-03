@@ -12,7 +12,6 @@
 ├── index.html
 ├── README.md
 ├── .gitignore
-├── .prettierrc
 ├── css/
 │   └── styles.css
 ├── images/
