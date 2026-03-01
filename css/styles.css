@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #fff;
 }
@@ -13,6 +13,16 @@ p {
   margin: 0;
 }
 
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
 img {
   display: block;
   max-width: 100%;
@@ -36,33 +46,11 @@ img {
 
 .header-nav {
   display: flex;
-}
-
-.nav-list {
-  display: flex;
   align-items: center;
-  gap: 40px;
-}
-
-.contact-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-ul,
-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -79,7 +67,11 @@ a {
 .header-logo .logo-part {
   color: #2e2f42;
 }
-
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .nav-link {
   display: block;
   padding: 24px 0;
@@ -101,7 +93,11 @@ a {
   font-style: normal;
   margin-left: auto;
 }
-
+.contact-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .contact-link {
   display: block;
   padding: 24px 0;
@@ -112,13 +108,14 @@ a {
 }
 
 .section-solutions {
-  display: flex;
-  justify-content: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  align-items: center;
-  max-width: 100%;
   background-color: #2e2f42;
+  padding: 188px 0;
+}
+
+.button-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-solutions {
@@ -151,7 +148,6 @@ a {
 .button-solutions:hover,
 .button-solutions:focus {
   background-color: #404bbf;
-  color: #ffffff;
 }
 
 /* hidden */
@@ -173,25 +169,22 @@ a {
   padding: 120px 0;
 }
 
-.features-block {
+.features-list {
   display: flex;
+  gap: 24px;
 }
+
+.features-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .features-strategy {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  margin-bottom: 8px;
   letter-spacing: 0.02em;
   color: #2e2f42;
-}
-
-.features-item {
-  width: 264px;
-}
-
-.features-list {
-  display: flex;
-  gap: 24px;
+  margin-bottom: 8px;
 }
 
 .features-text {
@@ -199,6 +192,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .header-team {
@@ -207,8 +202,8 @@ a {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2e2f42;
   text-transform: capitalize;
+  color: #2e2f42;
   margin-bottom: 72px;
 }
 
@@ -222,10 +217,14 @@ a {
   display: flex;
   gap: 24px;
 }
+
+.team-item {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
+  background-color: #ffffff;
+}
 .team-info-block {
-  display: block;
-  width: 264px;
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team-member {
   font-weight: 500;
@@ -234,6 +233,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .team-work {
@@ -245,14 +245,9 @@ a {
   color: #434455;
 }
 
-.team-item {
-  display: block;
-  height: 380px;
-  width: 264px;
-  border-radius: 0 0 4px 4px;
-  background-color: #ffffff;
+.section-port {
+  padding: 120px 0;
 }
-
 .header-port {
   display: block;
   font-weight: 700;
@@ -264,10 +259,6 @@ a {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
-.section-port {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 
 .port-list {
   display: flex;
@@ -275,6 +266,7 @@ a {
   column-gap: 24px;
   row-gap: 48px;
 }
+
 .port-desk {
   font-weight: 500;
   font-size: 20px;
@@ -288,12 +280,9 @@ a {
 }
 
 .port-name {
-  display: block;
   padding: 32px 16px;
-  line-height: 1.5;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .port-text {
@@ -303,6 +292,7 @@ a {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 /* footer */
 
 .footer-container {
@@ -310,17 +300,22 @@ a {
   width: 264px;
 }
 
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
 
 .footer-text {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  max-width: 264px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 16px;
   color: #f4f4fd;
 }
 
